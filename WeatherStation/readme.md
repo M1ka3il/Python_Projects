@@ -1,24 +1,50 @@
-Welcome to the Weather Data Viewer! With this tool, you can visualize and sort weather data from this specific CSV file.
+# Dokumentation: Wetterdaten-Viewer
 
-The code reads a CSV file and displays its contents in a Treeview widget. The user can sort the table by clicking on the column headers. Additionally, there is a button that allows sorting the table by the sum of precipitation for each year.
-At the beginning, the Pandas library is imported to read and process the CSV file, and the Tkinter library is imported to create the GUI window and widgets. 
-The CSV file is read using the pd.read_csv() function and stored in a Pandas DataFrame. The file path is specified, the delimiter and decimal point type are defined, and duplicates in the "Stations_id" column are removed.
+Willkommen beim Wetterdaten-Viewer! Mit diesem Tool können Sie Wetterdaten aus einer CSV-Datei visualisieren und sortieren.
 
-The GUI window is created using the Tk() function from Tkinter, and its size is set to 1400x500 pixels. The Treeview widget is created using the ttk.Treeview() function from Tkinter. Column headers are inserted into the widget and sorted using the SortColumn() function when clicked.
+# Funktionalität 
+Der Code liest eine CSV-Datei ein und zeigt deren Inhalte in einem Treeview-Widget an. 
+Der Nutzer kann die Tabelle durch Klicken auf die Spaltenüberschriften sortieren lassen. 
+Zusätzlich gibt es einen Button, mit dem die Tabelle nach der Summe der Niederschlagsmenge jedes Jahres sortiert werden kann.
 
-The SortColumn() function takes the column header as an argument for sorting and optionally the sorting order. 
-The function first clears the current view in the Treeview widget and sorts the data in the DataFrame by the selected column. Then, the sorted table is inserted into the Treeview widget.
+## Systemanforderungen
 
-The SortByNiederschlagsmenge() function is called when the "Sort by Annual Precipitation" button is clicked. 
-The function calculates the sum of precipitation for each year in the DataFrame, sorts the table by the calculated sum, and removes the additional column with the sums. Then, the sorted table is inserted into the Treeview widget.
+Um den Wetterdaten-Viewer nutzen zu können, benötigen Sie Folgendes:
 
-Finally, the Treeview widget is filled with the data and column headers and added to the GUI window. 
-The "Sort by Annual Precipitation" button is created, and the window is opened with mainloop() to wait for user input.
+- Python 3.x
+- Die Python-Module pandas und tkinter
 
-If you want to change the sorting order, simply click on the corresponding sorting button again. The sorting order will be reversed.
+## Installation
 
-Notes:
-- Changing the sorting order will reset the filtering by annual precipitation.
-- Atm it just works with this specific csv file.
-- The column width is set to 80 pixels and can be manually adjusted.
-- You can use the scroll function to navigate through the table.
+1. Laden Sie den Code von GitHub herunter und entpacken Sie das ZIP-Archiv.
+2. Öffnen Sie die Datei `WetterdatenViewer.py` in einem Python-Editor oder einer Python-IDE.
+3. Speichern Sie die Datei ab.
+4. Öffnen Sie eine Konsole oder ein Terminal und wechseln Sie in das Verzeichnis, in dem die Datei `WetterdatenViewer.py` gespeichert ist.
+5. Geben Sie den Befehl `python WetterdatenViewer.py` ein, um das Tool zu starten.
+
+## Verwendung
+
+### Schritt 1: CSV-Datei laden
+
+Nach dem Start des Tools wird automatisch die Datei `Niederschlag_Daten_ungefiltert.csv` aus dem entsprechenden Ordner geladen. Wenn Sie eine andere CSV-Datei verwenden möchten, ändern Sie den Dateipfad in Zeile 6 des Codes entsprechend ab.
+
+### Schritt 2: Daten anzeigen
+
+Nachdem die Daten geladen wurden, werden sie in einer Tabelle angezeigt. Die Spaltenüberschriften dienen als Sortierbuttons. Klicken Sie auf eine Spaltenüberschrift, um die Daten nach dieser Spalte zu sortieren.
+
+### Schritt 3: Daten filtern
+
+Um die Daten nach Jahresniederschlagsmenge zu filtern, klicken Sie auf den Button "Nach Jahresniederschlagsmenge sortieren". Die Daten werden dann nach der Summe der Niederschlagsmengen für jedes Jahr sortiert.
+
+### Schritt 4: Sortierreihenfolge ändern
+
+Wenn Sie die Sortierreihenfolge ändern möchten, klicken Sie einfach erneut auf den entsprechenden Sortierbutton. Die Sortierreihenfolge wird dann umgekehrt.
+
+## Hinweise
+
+- Wenn Sie die Sortierreihenfolge ändern, wird die Filterung nach Jahresniederschlagsmenge zurückgesetzt.
+- Wenn Sie eine andere CSV-Datei laden möchten, muss diese die gleiche Struktur wie `Niederschlag_Daten_ungefiltert.csv` haben.
+- Die Spaltenbreite ist auf 80 Pixel festgelegt und kann manuell geändert werden.
+- Wenn es mehr Daten als Platz in der Tabelle gibt, können Sie die Scrollfunktion benutzen, um durch die Tabelle zu navigieren.
+
+<hr>
