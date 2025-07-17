@@ -2,7 +2,7 @@
 
 Willkommen beim Wetterdaten-Viewer! Mit diesem Tool können Sie Wetterdaten aus einer CSV-Datei visualisieren und sortieren.
 
-# Funktinalität 
+# Funktionalität 
 Der Code liest eine CSV-Datei ein und zeigt deren Inhalte in einem Treeview-Widget an. 
 Der Nutzer kann die Tabelle durch Klicken auf die Spaltenüberschriften sortieren lassen. 
 Zusätzlich gibt es einen Button, mit dem die Tabelle nach der Summe der Niederschlagsmenge jedes Jahres sortiert werden kann.
