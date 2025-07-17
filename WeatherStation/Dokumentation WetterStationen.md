@@ -1,4 +1,4 @@
-# Kundendokumentation: Wetterdaten-Viewer
+# Dokumentation: Wetterdaten-Viewer
 
 Willkommen beim Wetterdaten-Viewer! Mit diesem Tool können Sie Wetterdaten aus einer CSV-Datei visualisieren und sortieren.
 
