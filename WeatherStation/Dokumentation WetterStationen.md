@@ -48,6 +48,3 @@ Wenn Sie die Sortierreihenfolge ändern möchten, klicken Sie einfach erneut auf
 - Wenn es mehr Daten als Platz in der Tabelle gibt, können Sie die Scrollfunktion benutzen, um durch die Tabelle zu navigieren.
 
 <hr>
-
-
-<hr>
